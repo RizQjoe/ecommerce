@@ -2,6 +2,7 @@ const Kopi = require('../model/Kopi')
 
 
 function getAllKopi(req, res){
+    // console.log('testt')
     Kopi.find({})
     .then(rows =>{
         res.send(rows)

@@ -19,7 +19,7 @@ const kopiSchema = mongoose.Schema({
 
     img: {
         type: String,
-        require: True
+        require: true
     },
 
     price: {

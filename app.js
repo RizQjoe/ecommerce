@@ -16,7 +16,8 @@ MongoClient.connect(url, (err,db)=>{
 
 
 // data di routers
-// const Kopi = require("./routers/kopi")
+const Kopi = require("./server/routers/Kopi")
+
 
 app.use(bodyParser.urlencoded({ extended:true }));
 app.use(bodyParser.json());
@@ -24,6 +25,12 @@ app.use(bodyParser.json({ type: 'application/*+json' }))
 app.use(bodyParser.json({type: 'application/x-www-form-urlencoded'}))
 
 app.use(cors())
+
+
+app.use('/kopi', Kopi)
+
+
+
 
 app.get('/', (req,res)=>{
     res.json('mongoose connected')
