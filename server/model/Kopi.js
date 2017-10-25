@@ -3,7 +3,7 @@ const mongoose = require('mongoose')
 const kopiSchema = mongoose.Schema({
     
     
-    title: {
+    item: {
         type: String,
         require: true
     },
@@ -13,7 +13,7 @@ const kopiSchema = mongoose.Schema({
         require: true
     },
     
-    stock: {
+    qty: {
         type: Number,
         require: true
     },
@@ -28,7 +28,7 @@ const kopiSchema = mongoose.Schema({
         require: true
     }
 
-})
+});
 
 const Kopi = mongoose.model('Kopi', kopiSchema)
 
