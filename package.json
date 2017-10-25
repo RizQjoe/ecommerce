@@ -1,0 +1,28 @@
+{
+  "name": "ecommerce",
+  "version": "1.0.0",
+  "description": "Demo App Ecomers",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RizQjoe/ecommerce.git"
+  },
+  "author": "RizQJoe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RizQjoe/ecommerce/issues"
+  },
+  "homepage": "https://github.com/RizQjoe/ecommerce#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "mongodb": "^2.2.33",
+    "mongoose": "^4.12.4"
+  }
+}
