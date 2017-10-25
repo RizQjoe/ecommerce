@@ -21,8 +21,60 @@ function findOneKopi(req,res){
     })
 }
 
-function insertKopi(req,res){
+    //create
+function insertKopi(req, res){
     Kopi.create({
-        // masih mikir 
+        //
+        item: req.body.item,
+        category: req.body.category,
+        qty: parseInt(req.body.qty),
+        img: req.body.img,
+        price: req.body.price
+    })
+    .then(function (data){
+        res.send(data)
+    })
+    .catch(function(err){
+        res.status(500).send(err)
     })
 }
+ // update
+function UpdateKopi (req, res){
+    Kopi.findOneAndUpdate({
+        _id: req.params.id
+    },{
+        item: req.body.item,
+        category: req.body.category,
+        qty: parseInt(req.body.qty),
+        img: req.body.img,
+        price: req.body.price
+    })
+    .then(function(result){
+        res.send(result)
+    })
+    .catch(function (err){
+        res.status(300).send(err)
+    })
+
+}
+
+//delete
+function deleteKopi(req, res){
+    Kopi.deleteOne({
+        _id:req.params.id
+    })
+    .then(function (row){
+        res.send(row)
+    })
+}
+
+
+
+module.exports ={
+    getAllKopi,
+    findOneKopi,
+    insertKopi,
+    UpdateKopi,
+    deleteKopi
+}
+
