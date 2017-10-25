@@ -38,7 +38,7 @@ function insertKopi(req, res){
         res.status(500).send(err)
     })
 }
- // update
+ // update GET.PUT
 function UpdateKopi (req, res){
     Kopi.findOneAndUpdate({
         _id: req.params.id
