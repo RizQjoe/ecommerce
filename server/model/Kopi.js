@@ -2,7 +2,6 @@ const mongoose = require('mongoose')
 
 const kopiSchema = mongoose.Schema({
     
-    
     item: {
         type: String,
         require: true
