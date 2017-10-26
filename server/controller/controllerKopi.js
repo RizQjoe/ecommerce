@@ -69,8 +69,6 @@ function deleteKopi(req, res){
     })
 }
 
-
-
 module.exports ={
     getAllKopi,
     findOneKopi,

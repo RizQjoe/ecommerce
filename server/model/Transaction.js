@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 Schema= mongoose.Schema
 
 const transactionSchema = mongoose.Schema({
-    memberid:{
+    user:{
         type: Schema.Type.ObjectId, reference:"Customer"
     },
     days: Number,

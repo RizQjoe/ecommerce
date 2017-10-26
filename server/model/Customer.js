@@ -3,22 +3,24 @@ const mongoose = require("mongoose")
 const customerSchema = mongoose.Schema({
     customerName:{
         type: String,
-        require: true
+        require: true,
+        unique: true
     },
 
-    memberid:{
+    email:{
        type: String,
-       require: true 
+       require: true,
+       unique 
     },
 
-    address:{
+    password:{
         type: String,
         require: true
     },
 
-    phoneNumber: {
-        type: String,
-        require: true
+    role: {
+        type: String
+        
     }
 });
 
